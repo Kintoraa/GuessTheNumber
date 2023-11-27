@@ -80,6 +80,7 @@ main {
 }
 #page-two .canvas-container {
   position: relative;
+  margin: 0;
 }
 #page-two .canvas-container canvas {
   margin: 10px 0 40px 0;
