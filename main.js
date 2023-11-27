@@ -35,7 +35,7 @@ const currentGame = (value) => {
   if (value == guessNumber) {
     errorUpper = 0;
     errorLower = 0;
-    indication.innerHTML = `🟢 Bravo le nombre etais : ${guessNumber}`;
+    indication.innerHTML = `🟢 Bravo, le nombre était : ${guessNumber}`;
     return;
   }
 
