@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./public/assets/style/style.css" />
+    <title>Vite App</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@100;400;500;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+  </head>
+  <body>
+    <section id="page-zero">
+      <h1 id="title">Guess the number</h1>
+    </section>
+    <main>
+      <div id="main">
+        <section id="page-one">
+          <p>
+            L'application va generer un numero random, Ton but <br />
+            et de le retrouver en moin d'essaie possible !
+          </p>
+          <button id="start-btn">Start</button>
+        </section>
+        <section id="page-two" style="display: none">
+          <div>
+            <p>
+              Je vais generé un nombre entre 0 et 500, essaye de le trouver !😁
+            </p>
+            <span id="score">Essaie : 0</span>
+
+            <form id="form" action="submit">
+              <label for="quantity" class="label-container">Ton nombre</label>
+              <input
+                type="text"
+                id="quantity"
+                name="quantity"
+                pattern="^(?:[0-9]|[1-9][0-9]|[1-4][0-9]{2}|500)$"
+                value="250"
+                title="Veuillez entrer un nombre entre 0 et 500"
+                required
+              />
+              <button type="submit" id="btn-form">Envoyez</button>
+            </form>
+
+            <div id="testing">
+              <p id="result"></p>
+            </div>
+            <div class="canvas-container">
+              <canvas id="myCanvas" width="487" height="44"> </canvas>
+              <span id="span-left">0</span>
+              <span id="span-right">500</span>
+            </div>
+            <button id="btn-restart" style="display: none">Replay</button>
+          </div>
+        </section>
+        <section id="restart"></section>
+        <script type="module" src="/main.js"></script>
+      </div>
+    </main>
+    <footer>
+      <a href="http://"><i class="fa fa-github" style="font-size: 36px"></i></a>
+    </footer>
+  </body>
+</html>
